@@ -1,0 +1,31 @@
+<!-- =====================================================================
+  EYECANDY FRONT COVER
+  1. Put the three PNGs from the eyecandy folder (e-mark-white.png, eye-white.png,
+     wordmark-white.png) in your repo at  images/eyecandy/
+  2. In index.html, replace the front cover line
+         <article class="page cover"></article>
+     with this block. Styles are inside it.
+  Red-on-white versions (…-red.png) are in the folder too if you want a white cover.
+  ===================================================================== -->
+<article class="page cover" style="background:#fd0000;color:#fff">
+  <style>
+    .ec-mark{position:absolute;left:64px;top:60px;height:68px;width:auto}
+    .ec-year{position:absolute;right:64px;top:74px;margin:0;font-size:24px;font-weight:600;letter-spacing:-.01em}
+    .ec-eye{position:absolute;left:64px;top:290px;width:722px;height:auto;transform-origin:50% 50%;animation:ecblink 7s ease-in-out infinite}
+    .ec-word{position:absolute;left:64px;top:810px;width:722px;height:auto}
+    .ec-foot{position:absolute;left:64px;right:64px;bottom:60px;display:flex;justify-content:space-between;align-items:center;font-size:20px}
+    .ec-foot p{margin:0}
+    .ec-foot b{font-weight:600;border:1.5px solid #fff;border-radius:999px;padding:10px 22px;white-space:nowrap}
+    @keyframes ecblink{
+      0%,90%,100%{transform:scaleY(1)}
+      94%{transform:scaleY(.06)}
+    }
+    @media (prefers-reduced-motion:reduce){.ec-eye{animation:none}}
+  </style>
+
+  <img class="ec-mark" src="images/eyecandy/e-mark-white.png" alt="">
+  <p class="ec-year">Fall Zines · Autumn 2026</p>
+  <img class="ec-eye" src="images/eyecandy/eye-white.png" alt="Eyecandy eye symbol">
+  <img class="ec-word" src="images/eyecandy/wordmark-white.png" alt="Eyecandy, a visual design studio">
+  <div class="ec-foot"><p>Fall merch zines from the studio</p><b>Turn the page &rarr;</b></div>
+</article>
